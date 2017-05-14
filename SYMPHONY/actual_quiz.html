@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta http-equiv="refresh" content="600;URL=quiz_score.html">
+
+    <title>Quiz - Symphony</title>
+
+    <!-- Bootstrap core CSS -->
+            <link type="text/css" rel="stylesheet" href="static/css/bootstrap.min.css"/>
+
+    <!-- Add custom CSS here -->
+    <link type="text/css" rel="stylesheet" href="static/css/MainStyles.css"/>
+</head>
+
+<body>
+
+    <div class="brand">SYMPHONY</div>
+    <div class="address-bar">Get Your Favorite Music Album Now</div>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Business Casual</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="home.php">Home</a>
+                    </li>
+					<li><a href="categoryView.php">Categories</a>
+                    </li>
+                    <li><a href="about.html">About</a>
+                    </li>
+                    <li><a href="quiz.html">Quiz</a>
+                    </li>
+                    <li><a href="contact.php">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Symphony <strong>Quiz on Music</strong>
+                    </h2>
+                    <hr>
+                </div>
+                
+                
+                <div class="col-lg-12 text-center">
+                    <img class="img-responsive img-border img-full" src="static/images/quiz.png" alt="">
+                    <h2> lets check your knowlage on music </h2>
+					<div class="clock" id="countdown"></div>
+					<script>
+						function countdown( elementName, minutes, seconds )
+						{
+						var element, endTime, hours, mins, msLeft, time;
+
+						function twoDigits( n )
+						{
+						return (n <= 9 ? "0" + n : n);
+						}
+
+						function updateTimer()
+						{
+						msLeft = endTime - (+new Date);
+						if ( msLeft < 1000 ) {
+						element.innerHTML = "countdown's over!";
+						} else {
+						time = new Date( msLeft );
+						mins = time.getUTCMinutes();
+						element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+						setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+						}
+						}
+
+						element = document.getElementById( elementName );
+						endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+						updateTimer();
+						}
+
+						countdown( "countdown", 10,0 );
+							</script>
+                        <br>
+                    </h2>
+					<h3 class="quiz-text01 text-center"><b>1.Who sings bad blood?</b></h3>
+
+	<form class="quiz-text02 text-center-right" action = "" >
+ 		<input type= "radio" name= "questions" value = "a"> Kylie Mingoue <br>
+ 		<input type= "radio" name= "questions" value = "b"> Elle Goulding <br>
+		<input type= "radio" name= "questions" value = "c"> Ariana Grande <br>
+ 		<input type= "radio" name= "questions" value = "d">  Taylor Swift <br>
+
+	</form>
+
+	<h3 class="quiz-text01 text-center"><b>2.Which country crossover artist of the 1970s had a western swing background and a laid-back style that helped expand his national popularity?</b></h3>
+
+		<form class="quiz-text02 text-center-right" action = "">
+ 			<input type= "radio" name= "questions" value = "a"> Robert Plant  <br>
+ 			<input type= "radio" name= "questions" value = "b"> John Paul Jones <br>
+			<input type= "radio" name= "questions" value = "c"> Harold Melvin <br>
+ 			<input type= "radio" name= "questions" value = "d">  Glen Campbell <br>
+
+		</form>
+	
+	<h3 class="quiz-text01 text-center"><b>3.Who sings one thing?</b></h3>
+
+		<form class="quiz-text02 text-center-right" action = "">
+ 			<input type= "radio" name= "questions" value = "a"> 5 Seconds of summer <br>
+ 			<input type= "radio" name= "questions" value = "b"> Uinon j <br>
+			<input type= "radio" name= "questions" value = "c">The vamps  <br>
+ 			<input type= "radio" name= "questions" value = "d"> One direction  <br>
+
+		</form>
+
+	<h3 class="quiz-text01 text-center"><b>4.Which southern rock band featured guitar virtuoso Duane Allman?</b></h3>
+
+		<form class="quiz-text02 text-center-right" action = "">
+ 			<input type= "radio" name= "questions" value = "a"> All My Children <br>
+ 			<input type= "radio" name= "questions" value = "b"> All in the Family <br>
+			<input type= "radio" name= "questions" value = "c"> Allman Brothers  <br>
+ 			<input type= "radio" name= "questions" value = "d">All in For Rock  <br>
+
+		</form>
+
+	<h3 class="quiz-text01 text-center"><b>5.Who sings dedication to my ex?</b></h3>
+
+		<form  class="quiz-text02 text-center-right" action = "">
+ 			<input type= "radio" name= "questions" value = "a">  Jason derulo<br>
+ 			<input type= "radio" name= "questions" value = "b">Fergie  <br>
+			<input type= "radio" name= "questions" value = "c">Iloyd   <br>
+ 			<input type= "radio" name= "questions" value = "d"> Shawn Mendes  <br>
+
+		</form>
+
+	<h3 class="quiz-text01 text-center"><b>6.Which Los Angeles–based band recorded the desperate, almost apocalyptic song "Hotel California"?</b></h3>
+
+		<form class="quiz-text02 text-center-right" action = "">
+ 			<input type= "radio" name= "questions" value = "a"> The Byrds  <br>
+ 			<input type= "radio" name= "questions" value = "b"> Love Unlimited Orchestra  <br>
+			<input type= "radio" name= "questions" value = "c"> Robert Plant  <br>
+ 			<input type= "radio" name= "questions" value = "d">The Eagles   <br>
+
+		</form>
+
+	<h3 class="quiz-text01 text-center"><b>7.Who sings want to want me?</b></h3>
+
+		<form class="quiz-text02 text-center-right" action = "">
+ 			<input type= "radio" name= "questions" value = "a"> Jason Derulo  <br>
+ 			<input type= "radio" name= "questions" value = "b">Eva Simpson <br>
+			<input type= "radio" name= "questions" value = "c"> Marvin Gaye  <br>
+ 			<input type= "radio" name= "questions" value = "d"> Nelly  <br>
+
+		</form>
+
+	<h3 class="quiz-text01 text-center"><b>8.Which British rock band recorded the concept album "Exile on Main Street" in 1972?</b></h3>
+
+		<form class="quiz-text02 text-center-right" action = "">
+ 			<input type= "radio" name= "questions" value = "a"> Harold Melvin and the Blue Notes  <br>
+ 			<input type= "radio" name= "questions" value = "b"> Rolling Stones  <br>
+			<input type= "radio" name= "questions" value = "c">Gerry and the Pacemakers  <br>
+ 			<input type= "radio" name= "questions" value = "d">  Ziggy Stardust and the Spiders from Mars <br>
+
+		</form>
+
+	<h3 class="quiz-text01 text-center"><b>9.Which English-born Australian recording artist scored a series of Top 10 country-pop crossover hits in the 1970s including “Let Me Be There,” “If You Love Me (Let Me Know),” and “Have You Never Been Mellow?”</b></h3>
+
+		<form class="quiz-text02 text-center-right" action = "">
+ 			<input type= "radio" name= "questions" value = "a"> Olivia Newton-John  <br>
+ 			<input type= "radio" name= "questions" value = "b"> Charlie Rich  <br>
+			<input type= "radio" name= "questions" value = "c">Donna Summer  <br>
+ 			<input type= "radio" name= "questions" value = "d"> Black Magic Woman <br>
+
+		</form>
+
+	<h3 class="quiz-text01 text-center"><b>10.Which multitalented African American singer, songwriter, arranger, conductor, and producer formed the Love Unlimited Orchestra, which recorded the instrumental hit "Love's Theme?"</b></h3>
+
+		<form class="quiz-text02 text-center-right" action = "">
+ 			<input type= "radio" name= "questions" value = "a" > Carlos Santana  <br>
+ 			<input type= "radio" name= "questions" value = "b" > Brian Wilson  <br>
+			<input type= "radio" name= "questions" value = "c" > Barry White  <br>
+ 			<input type= "radio" name= "questions" value = "d" > Diddy  <br>
+		</form>
+					<hr>
+                    <a href="quiz_score.html" class="btn btn-default btn-lg">Submit</a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; 2016 <a href="index.html"> www.symphony.com </a> All rights reserved | Website Design by <a href="#"> DESIGN </a> Company.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

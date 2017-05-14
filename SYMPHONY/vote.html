@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Vote</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="static/css/MainStyles.css" rel="stylesheet">
+	
+	
+	<script>
+	
+	function getVote(int){
+		if(window.XMLHttpRequest){
+			//works for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+			}
+		else{
+			//works for IE6 and IE5 only
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange=function(){
+				if(xmlhttp.readyState==4 && xmlhttp.status==200){
+					
+					document.getElementById("poll").innerHTML=xmlhttp.responseText;
+					}
+				}
+				xmlhttp.open("GET", "vote.php?vote=" +int,true);
+				xmlhttp.send();
+		}
+
+</script>
+</head>
+
+<body>
+
+    <div class="brand">SYMPHONY</div>
+    <div class="address-bar">Get Your Favorite Music Album Now</div>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="home.php">Home</a>
+                    </li>
+					<li><a href="categoryView.php">Categories</a>
+                    </li>
+                    <li><a href="about.html">About</a>
+                    </li>
+                    <li><a href="quiz.html">Quiz</a>
+                    </li>
+                    <li><a href="contact.php">Contact</a>
+                    </li>
+					<li><a href="vote.html">Vote</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+<iframe class="clock02" src="http://free.timeanddate.com/countdown/i55z7qcz/n389/cf12/cm0/cu4/ct0/cs0/ca0/cr0/ss0/caceee/cpcc30/pct/tcfff/fs100/szw320/szh135/tatTime%20left%20to%20Finish%20Voting/taceee/tptTime%20since%20Event%20started%20in/tpcf30/macddd/mpcccc/iso2016-04-31T00:00:00" allowTransparency="true" frameborder="0" width="220" height="69" align="right" ></iframe>
+
+
+    <div class="container">
+
+        <div class="row">
+			<div class="col-lg-12">
+                    <hr width="100%" >
+                    <h2 class="intro-text01 text-center">Hurry, vote now for your favourite <strong>Artist</strong> for the year 2016/2017!
+                    <hr>
+                </div>
+				
+            </div>
+			</div>
+
+	<br>
+	<br>
+	<br>
+	<div id="poll">
+    <form id="hello">
+    <table align="center" style="width:35%">
+    <tr>
+	<tr>
+	<td><img src="static/images/JD.png" alt="dj" style="width:250px;height:250px"><hr></td>
+	<td><input type="radio" class="rdb" name="vote" value="0" onclick="getVote(this.value)"><h3 class="Artist-name" >Jason Derulo<br></td>
+	</tr>
+	<tr>
+    <td><img src="static/images/CB.png" alt="dj"  style="width:250px;height:250px"><hr></td>
+	<td><input type="radio" class="rdb" name="vote" value="1" onclick="getVote(this.value)"> <h3 class="Artist-name" >Chris Brown<br></td>
+	</tr>
+	<tr>
+    <td><img src="static/images/CP.png" alt="dj"  style="width:250px;height:250px"><hr></td>
+	<td><input type="radio" class="rdb" name="vote" value="2" onclick="getVote(this.value)"><h3 class="Artist-name" >Charlie Puth<br></td>
+	</tr>
+	<tr>
+    <td><img src="static/images/PB.png" alt="dj"  style="width:250px;height:250px"><hr></td>
+	<td><input type="radio" class="rdb" name="vote" value="3" onclick="getVote(this.value)"><h3 class="Artist-name" >Pitbull<br></td>
+	</tr>
+   
+</table>
+    </form>
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; 2016 <a href="index.html"> www.symphony.com </a> All rights reserved | Website Design by <a href="#"> DESIGN </a> Company.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
